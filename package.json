@@ -1,0 +1,59 @@
+{
+  "name": "dsh-qwen-asr",
+  "version": "1.2.0",
+  "type": "module",
+  "description": "Qwen speech-to-text plugin for DeepSeek Harness: async filetrans for long recordings, sync ASR for short clips, raw API output preserved.",
+  "license": "MIT",
+  "author": "wsdfgf",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wsdfgf/dsh-qwen-asr.git"
+  },
+  "homepage": "https://github.com/wsdfgf/dsh-qwen-asr#readme",
+  "bugs": {
+    "url": "https://github.com/wsdfgf/dsh-qwen-asr/issues"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "qwen",
+    "qwen3-asr",
+    "speech-to-text",
+    "asr",
+    "transcription"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "icon": "./icon.svg",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "lib/asr.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-plugin-manager"
+      ]
+    }
+  }
+}

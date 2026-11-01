@@ -1,0 +1,3 @@
+- insert:
+    - id: qwen-asr
+      name: 'dsh-qwen-asr'

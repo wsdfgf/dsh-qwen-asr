@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Qwen Speech-to-Text",
+    "description": "Transcribes uploaded audio files with the official Qwen3-ASR-Flash API, adds the transcript to the conversation, and exposes the raw model output through a tool."
+  }
+}
